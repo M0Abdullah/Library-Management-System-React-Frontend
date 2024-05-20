@@ -1,0 +1,163 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.edit-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 400px;
+  width: 40%;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.5em;
+  margin-top: 50px;
+}
+
+.flex {
+  margin-top: 30px;
+  display: flex;
+  padding: 10px;
+}
+
+.flex1 {
+  margin-top: 30px;
+  display: flex;
+  padding: 10px;
+}
+
+.flex2 {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.flex2 button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7em;
+  background-color: #1d4ed8;
+  border: none;
+  cursor: pointer;
+}
+
+.flex3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.label1 {
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -50px;
+  padding: 10px;
+}
+
+.label2 {
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -50px;
+  padding: 10px;
+}
+
+.label3 {
+  margin-right: 100px;
+  padding: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .edit-container {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .flex,
+  .flex1,
+  .flex2,
+  .flex3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .label1,
+  .label2,
+  .label3 {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .flex2 {
+    justify-content: center;
+  }
+
+  .flex2 button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-container {
+    margin-left: 5%;
+    width: 90%;
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+
+  }
+
+  .flex2 button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .edit-container {
+    text-align: center;
+    margin-left: 2%;
+    width: 96%;
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+  }
+
+  .flex2 button {
+    width: 100%;
+  }
+}

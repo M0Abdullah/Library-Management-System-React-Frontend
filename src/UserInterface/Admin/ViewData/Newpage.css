@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.View {
+    width: 50%;
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 30px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 1em;
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.View:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.view1,
+.view2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.view1 h1,
+.view2 h1,
+.view3 h1 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.view1:hover h1,
+.view2:hover h1,
+.view3:hover h1 {
+    color: #007BFF;
+}
+
+.view1 span,
+.view2 span {
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.view1:hover span,
+.view2:hover span {
+    color: #007BFF;
+}
+
+.view3 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .View {
+        width: 95%;
+    }
+
+    .view1,
+    .view2 {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,213 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+img {
+    text-align: center;
+    justify-content: center;
+    margin-left: 530px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.bookdetails h2 {
+    font-size: 1.7em;
+    margin-top: 1%;
+    margin-left: 4%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bookdetail1 {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.views {
+    display: flex;
+    margin-top: 2%;
+    margin-left: 4%;
+    justify-content: center;
+}
+
+.views1 button,
+.view2 button {
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.views1 button:hover,
+.view2 button:hover,
+.view3 button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.view2 {
+    margin-left: 5%;
+}
+
+.view3 button {
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.view3 {
+    margin-right: 10px;
+    margin-top: -0.5px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    .views {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .view2 {
+        margin-left: 0;
+        margin-top: 2%;
+    }
+
+    .view3 {
+        margin-right: 0;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .bookdetails {
+        margin-left: 5%;
+    }
+
+    .views1 {
+        margin-left: 5%;
+    }
+}
+
+/* Styling for horizontal rule */
+hr {
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto;
+    border: none;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Styling for detail of the book container */
+.detailofbook {
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in-out;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for heading in detail of the book */
+.detailofbook h2 {
+    font-size: 2em;
+    animation: slideIn 1s ease-in-out;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Styling for paragraph in detail of the book */
+.detailofbook p {
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    animation: fadeIn 1.5s ease-in-out;
+    line-height: 1.6;
+    color: #666666;
+    text-align: justify;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .detailofbook {
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .detailofbook h2 {
+        font-size: 1.8em;
+    }
+
+    .detailofbook p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .detailofbook {
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .detailofbook h2 {
+        font-size: 1.5em;
+    }
+
+    .detailofbook p {
+        font-size: 1em;
+    }
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for slideIn animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
