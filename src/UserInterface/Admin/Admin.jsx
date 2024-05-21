@@ -41,7 +41,7 @@ const Guestppage = ({ adminview, borrowdata, editdata }) => {
       const filteredBooks = data.books.filter(book => book.category === option);
       setBooks(filteredBooks);
       setIsLoading(false);
-      setApiMessage('Data fetched successfully!');
+      setApiMessage('Data fetched successfully!'  );
     } catch (error) {
       console.error('Error fetching data:', error);
       setIsLoading(false);
@@ -91,7 +91,9 @@ const Guestppage = ({ adminview, borrowdata, editdata }) => {
           </select>
         </div>
         <div className="object_3">
-          <button onClick={handlefunction}>Submit</button>
+          <button onClick={handlefunction} disabled={isLoading}>
+            {isLoading ? 'Loading...' : 'Submit'}
+          </button>
         </div>
       </div>
 

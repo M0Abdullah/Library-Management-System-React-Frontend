@@ -67,12 +67,13 @@ const Guestppage = ({ adminview, borrowdata }) => {
           </select>
         </div>
         <div className="object_3">
-          <button onClick={handlefunction}>Submit</button>
+          <button onClick={handlefunction} disabled={isLoading}>
+            {isLoading ? 'Loading...' : 'Submit'}
+          </button>
         </div>
       </div>
 
       <div id="id">
-        {isLoading && <p>Loading...</p>}
         {apiMessage && <p>{apiMessage}</p>}
       </div>
 
