@@ -7,8 +7,6 @@
 
 
 body {
-  background-color: #007bff;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -16,6 +14,12 @@ body {
   text-align: center;
 }
 
+.userlogin{
+  color: #007bff;
+  margin-right: 50px;
+  margin: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 /* Object Styles */
 .object {
@@ -376,7 +380,9 @@ body {
 }
 
 .adminportal {
-  margin-left: 70px;
+  margin-right: 50px;
+  padding: 10px;
+  margin: 10px;
   font-family: 'Times New Roman', Times, serif;
 }
 

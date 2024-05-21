@@ -12,17 +12,6 @@ const Guestppage = ({ adminview, borrowdata }) => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [detailedBook, setDetailedBook] = useState(null); // State to hold detailed book information
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const response = await fetch('https://4a3b785c-cdc8-4903-9957-641bddba9dbe.mock.pstmn.io', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ category: option }),
-        });
   const handlefunction = useCallback(async () => {
     setIsLoading(true);
     try {

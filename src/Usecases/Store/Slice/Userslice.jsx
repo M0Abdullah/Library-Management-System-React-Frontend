@@ -1,19 +1,17 @@
-  // userslice.js
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const loginuser = createAsyncThunk('user/loginUser', async (userCred) => {
   try {
-    const config = {
+    const response = await fetch(`https://ef7851be-900c-407d-8e60-6a09bd3912ef.mock.pstmn.io?username=${userCred.username}&password=${userCred.password}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-    };
-    const response = await fetch(`https://ef7851be-900c-407d-8e60-6a09bd3912ef.mock.pstmn.io?username=${userCred.username}&password=${userCred.password}`, config);
+    });
     if (!response.ok) {
       throw new Error('Authentication failed');
     }
-    return response.json();
+    return userCred; // Return user credentials on successful authentication
   } catch (error) {
     throw new Error('Authentication failed');
   }
@@ -35,7 +33,7 @@ const userslice = createSlice({
       })
       .addCase(loginuser.fulfilled, (state, action) => {
         state.loading = false;
-        state.userObj = action.payload;
+        state.userObj = action.payload; // Store user credentials
       })
       .addCase(loginuser.rejected, (state, action) => {
         state.loading = false;
@@ -45,4 +43,3 @@ const userslice = createSlice({
 });
 
 export const { reducer: userReducer } = userslice;
-
