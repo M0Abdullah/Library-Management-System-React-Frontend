@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import '../Guest/Guestppage.css';
 import Newpage from '../Admin/ViewData/Newpage.jsx';
 import Borrow from '../Admin/BorrowData/Borrow.jsx';
@@ -23,25 +23,30 @@ const Guestppage = ({ adminview, borrowdata }) => {
           },
           body: JSON.stringify({ category: option }),
         });
+  const handlefunction = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch('https://4a3b785c-cdc8-4903-9957-641bddba9dbe.mock.pstmn.io', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ category: option }),
+      });
 
-        if (!response.ok) {
-          throw new Error('Error fetching data');
-        }
-
-        const data = await response.json();
-        const filteredBooks = data.books.filter(book => book.category === option);
-        setBooks(filteredBooks);
-        setIsLoading(false);
-        setApiMessage('Data fetched successfully!');
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setIsLoading(false);
-        setApiMessage('Error fetching data. Please try again.');
+      if (!response.ok) {
+        throw new Error('Error fetching data');
       }
-    };
 
-    if (option) { // Only fetch data if option is set
-      fetchData();
+      const data = await response.json();
+      const filteredBooks = data.books.filter(book => book.category === option);
+      setBooks(filteredBooks);
+      setIsLoading(false);
+      setApiMessage('Data fetched successfully!');
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setIsLoading(false);
+      setApiMessage('Error fetching data. Please try again.');
     }
   }, [option]);
 
@@ -73,7 +78,7 @@ const Guestppage = ({ adminview, borrowdata }) => {
           </select>
         </div>
         <div className="object_3">
-          <button onClick={() => { }}>Submit</button>
+          <button onClick={handlefunction}>Submit</button>
         </div>
       </div>
 
