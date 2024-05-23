@@ -13,14 +13,15 @@
 
 .book-table th,
 .book-table td {
-    border: 2px solid #555;
+    border: 1px solid #555;
     padding: 2rem;
     text-align: center;
+    border-radius: 13px;
     transition: all 0.4s ease-in-out;
 }
 
 .book-table th {
-    background-color: #333;
+    background-color:#0e7490;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -35,21 +36,20 @@
     color: #000;
 }
 
-.book-table tbody tr td button {
-  background-color: #fd516e;
-    
+.book-table tbody tr td Button {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     cursor: pointer;
     color: #eee;
     border: none;
     border-radius: 15px;
+    width: 150px;
+    height: 50px;
     padding: 1rem 2rem;
-    margin: 0.5rem;
-    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    margin: 10px;
+    /* transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; */
 }
 
-.book-table tbody tr td button:hover {
-    background-color: #d0314c;
+.book-table tbody tr td Button:hover {
 
     transform: scale(1.08) translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -83,7 +83,7 @@
         padding: 1.5rem;
     }
 
-    .book-table tbody tr td button {
+    .book-table tbody tr td Button {
         padding: 0.75rem 1.5rem;
     }
 }
@@ -100,7 +100,7 @@
         padding: 1rem;
     }
 
-    .book-table tbody tr td button {
+    .book-table tbody tr td Button {
         padding: 0.5rem 1rem;
     }
 }

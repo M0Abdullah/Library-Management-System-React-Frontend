@@ -77,7 +77,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.object_2 button {
+.object_2 Button {
   cursor: pointer;
   /* Deep blue */
   width: 120px;
@@ -210,7 +210,7 @@ body {
 
 
 /* Button */
-.object2 button {
+.object2 Button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -222,7 +222,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.object2 button:hover {
+.object2 Button:hover {
   background-color: #0056b3;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
@@ -248,7 +248,7 @@ body {
     border-radius: 25px;
   }
 
-  .object2 button {
+  .object2 Button {
     padding: 8px;
     margin: 8px;
     width: auto;
@@ -275,7 +275,7 @@ body {
     border-radius: 20px;
   }
 
-  .object2 button {
+  .object2 Button {
     padding: 6px;
     margin: 6px;
     width: auto;
@@ -298,7 +298,7 @@ body {
   transform: scale(1.05);
 }
 
-.object3_1 button {
+.object3_1 Button {
   width: 120px;
   height: 40px;
   margin-top: 37px;
@@ -313,7 +313,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.object3_1 button:hover {
+.object3_1 Button:hover {
   background-color: #d0314c;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -331,13 +331,13 @@ body {
     margin-top: 1rem;
   }
 
-  .object3_1 button {
+  .object3_1 Button {
     margin-top: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .object3_1 button {
+  .object3_1 Button {
     width: 100px;
     height: 35px;
     margin-top: 20px;
@@ -393,7 +393,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.object_3 button {
+.object_3 Button {
   width: 80px;
   height: 25px;
   background-color: black;
@@ -406,7 +406,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.object_3 button:hover {
+.object_3 Button:hover {
   background-color: rgb(30, 30, 30);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
@@ -428,7 +428,7 @@ body {
     font-size: 1em;
   }
 
-  .object_3 button {
+  .object_3 Button {
     width: 70px;
     height: 20px;
     font-size: 0.6em;
@@ -457,7 +457,7 @@ body {
     font-size: 0.9em;
   }
 
-  .object_3 button {
+  .object_3 Button {
     width: 60px;
     height: 18px;
     font-size: 0.5em;
@@ -553,14 +553,14 @@ body {
     margin-left: 20px;
   }
 
-  .object2 button {
+  .object2 Button {
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     font-size: 0.5em;
   }
 
-  .object3_1 button {
+  .object3_1 Button {
     width: 90px;
     height: 30px;
     margin-left: 20px;
@@ -576,7 +576,7 @@ body {
     font-size: 0.8em;
   }
 
-  .object_3 button {
+  .object_3 Button {
     width: 50px;
     height: 15px;
     font-size: 0.4em;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Edit.add1.css';
 import { InputNumber } from 'antd';
+import { Button, Flex } from 'antd';
 
 const Edit = ({ book, updateBook, closeEdit }) => {
   const [editedBook, setEditedBook] = useState({});
@@ -115,8 +116,8 @@ const Edit = ({ book, updateBook, closeEdit }) => {
           />
         </div>
         <div className="flex2">
-          <button type="submit" className="savebtn">Save</button>
-          <button type="button" className="cancelbtn" onClick={closeEdit}>Cancel</button>
+          <Button type="submit"  className="savebtn">Save</Button>
+          <Button type="button" className="cancelbtn" onClick={closeEdit}>Cancel</Button>
         </div>
       </form>
     </div>
