@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const loginuser = createAsyncThunk('user/loginUser', async (userCred) => {
   try {
-    const response = await fetch(`https://ef7851be-900c-407d-8e60-6a09bd3912ef.mock.pstmn.io?username=${userCred.username}&password=${userCred.password}`, {
+    const response = await fetch(`https://62adca20-af73-48e1-8d0a-f7f69c4a63c5.mock.pstmn.io?username=${userCred.username}&password=${userCred.password}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

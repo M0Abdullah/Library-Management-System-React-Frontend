@@ -91,8 +91,8 @@ const Login = ({ loginsuccess, loginsuccess2 }) => {
           <div className="pass" onClick={handleForgetClick}>Forget Password?</div>
           <input type="submit" value={loading ? "Loading..." : "Login"} disabled={loading} />
           {error && <div className="error">{error}</div>}
-          <div className="signup_link">
-            Not a Member ? <a href="signup.php">Signup</a>
+          <div className="signup_link">Not a Member ? 
+          <a href="signup.php">Signup</a>
           </div>
         </form>
       </div>
