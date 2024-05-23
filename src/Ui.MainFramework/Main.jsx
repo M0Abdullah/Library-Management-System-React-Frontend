@@ -7,6 +7,11 @@ import NewPage from '../UserInterface/Admin/ViewData/Newpage.jsx';
 import BorrowPage from '../UserInterface/Admin/BorrowData/Borrow.jsx';
 import EditPage from '../UserInterface/Admin/EditData/Edit.jsx';
 import Detailpage from '../UserInterface/Admin/Detailpage/Detailpage.jsx';
+import { DownloadOutlined } from '@ant-design/icons';
+import { Button, Divider, Flex, Radio } from 'antd';
+// import { Button, Flex } from 'antd';
+
+// import type { ConfigProviderProps } from 'antd';
 
 const Main = () => {
     const [currentPage, setCurrentPage] = useState('');
@@ -190,10 +195,11 @@ const Main = () => {
                                     </tr>
                                     <tr className='object3_1'>
                                         <td>
-                                            <button onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })}>View</button>
+
+                                            <Button onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })} type="primary" icon={<DownloadOutlined />} >View</Button>
                                             <br />
 
-                                            <button onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })}>View</button>
+                                            <Button onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })} type="primary" icon={<DownloadOutlined />}  >View</Button>
 
                                         </td>
                                     </tr>
@@ -216,12 +222,15 @@ const Main = () => {
                     <h1>Library Management System</h1>
                 </div>
                 <div className="object_2">
-                    {currentPage !== 'login' && <button onClick={handleBack}>Back</button>}
+                <Flex gap="small" wrap>
+                    {currentPage !== 'login' && <Button onClick={handleBack}>Back</Button>}
                     {isLoggedIn ? (
-                        <button onClick={handleLogout}>Log Out</button>
+                        <Button type='primary' onClick={handleLogout}>Log Out</Button>
                     ) : (
-                        <button onClick={handlePage}>Log In</button>
+                        <Button type='primary' onClick={handlePage}>Log In</Button>
                     )}
+                      </Flex>
+
                 </div>
             </div>
             {errorMessage && <p id='abd'>{errorMessage}</p>}

@@ -29,7 +29,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
     console.log('Submitting book data:', editedBook); // Log the data being sent
 
     try {
-      const response = await fetch('https://4a3b785c-cdc8-4903-9957-641bddba9dbe.mock.pstmn.io', {
+      const response = await fetch('https://08d48594-1db2-46f0-bd1a-0bd0485eae7f.mock.pstmn.io', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
