@@ -27,15 +27,16 @@ body {
   margin-top: 5vh;
   margin-left: 7vw;
   width: 85%;
-  background:#0e7490;
+  background: #d6d3d1;
   /* Slightly darker shades of the background gradient */
   font-family: Roboto, sans-serif;
   padding: 10px 20px;
   display: flex;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
   transition: all 0.3s ease;
+  color: black;
 }
 
 .object:hover {
@@ -44,13 +45,14 @@ body {
 }
 
 .object_1 {
-  color: antiquewhite;
+  /* color: antiquewhite; */
   margin-left: 2rem;
   font-family: 'Arial', sans-serif;
   flex: 1;
   margin-top: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
   transition: all 0.3s ease;
+  color: #1c1917;
 }
 
 .object_1:hover {
@@ -79,7 +81,6 @@ body {
 
 .object_2 Button {
   cursor: pointer;
-  /* Deep blue */
   width: 120px;
   height: 60px;
   font-size: 1.1em;

@@ -196,10 +196,10 @@ const Main = () => {
                                     <tr className='object3_1'>
                                         <td>
 
-                                            <Button onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })} type="primary" icon={<DownloadOutlined />} >View</Button>
+                                            <Button style={{backgroundColor:"black"}} onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })} type="primary" icon={<DownloadOutlined />} >View</Button>
                                             <br />
 
-                                            <Button onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })} type="primary" icon={<DownloadOutlined />}  >View</Button>
+                                            <Button style={{backgroundColor:"black"}} onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })} type="primary" icon={<DownloadOutlined />}  >View</Button>
 
                                         </td>
                                     </tr>
@@ -225,9 +225,9 @@ const Main = () => {
                 <Flex gap="small" wrap>
                     {currentPage !== 'login' && <Button onClick={handleBack}>Back</Button>}
                     {isLoggedIn ? (
-                        <Button type='primary' onClick={handleLogout}>Log Out</Button>
+                        <Button type='primary' style={{backgroundColor:"black"}} onClick={handleLogout}>Log Out</Button>
                     ) : (
-                        <Button type='primary' onClick={handlePage}>Log In</Button>
+                        <Button type='primary' style={{backgroundColor:"black"}} onClick={handlePage}>Log In</Button>
                     )}
                       </Flex>
 

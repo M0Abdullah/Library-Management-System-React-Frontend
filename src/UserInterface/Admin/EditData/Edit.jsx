@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './Edit.add1.css';
-import { InputNumber } from 'antd';
-import { Button, Flex } from 'antd';
+import { InputNumber, Button, Input } from 'antd';
 
 const Edit = ({ book, updateBook, closeEdit }) => {
   const [editedBook, setEditedBook] = useState({});
@@ -27,7 +26,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitting book data:', editedBook); // Log the data being sent
+    console.log('Submitting book data:', editedBook);
 
     try {
       const response = await fetch('https://08d48594-1db2-46f0-bd1a-0bd0485eae7f.mock.pstmn.io', {
@@ -45,7 +44,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
       }
 
       const updatedBook = await response.json();
-      updateBook(updatedBook); // Ensure the updated book is used
+      updateBook(updatedBook);
       closeEdit();
     } catch (error) {
       console.error('Error:', error.message);
@@ -71,8 +70,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
           <div className="label1">
             <label>Name</label>
           </div>
-          <InputNumber
-            type="text"
+          <Input
             style={{ width: 200 }}
             name="name"
             value={editedBook.name || ''}
@@ -83,8 +81,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
           <div className="label2">
             <label>Category</label>
           </div>
-          <InputNumber
-            type="text"
+          <Input
             style={{ width: 200 }}
             name="category"
             value={editedBook.category || ''}
@@ -116,8 +113,8 @@ const Edit = ({ book, updateBook, closeEdit }) => {
           />
         </div>
         <div className="flex2">
-          <Button type="submit"  className="savebtn">Save</Button>
-          <Button type="button" className="cancelbtn" onClick={closeEdit}>Cancel</Button>
+          <Button type="primary" style={{backgroundColor:"black"}} htmlType="submit" className="savebtn">Save</Button>
+          <Button type="primary" style={{backgroundColor:"black"}} className="cancelbtn" onClick={closeEdit}>Cancel</Button>
         </div>
       </form>
     </div>
