@@ -92,9 +92,9 @@ const Guestppage = ({ adminview, borrowdata }) => {
                 <td>${book.price}</td>
                 <td>{book.quantity}</td>
                 <td>
-                  <Button type='primary' style={{backgroundColor:"black"}} onClick={() => adminview(book)}>View</Button>
-                  <Button type='primary'style={{backgroundColor:"black"}} onClick={() => borrowdata(book)}>Borrow</Button>
-                  <Button type='primary'style={{backgroundColor:"black"}} onClick={() => handleSeeDetails(book)}>See Details</Button>
+                  <Button type='primary' onClick={() => adminview(book)}>View</Button>
+                  <Button type='primary' onClick={() => borrowdata(book)}>Borrow</Button>
+                  <Button type='primary' onClick={() => handleSeeDetails(book)}>See Details</Button>
                 </td>
               </tr>
             ))}

@@ -16,7 +16,7 @@ body {
 }
 
 .userlogin{
-  color: #007bff;
+  color:black;
   margin-right: 50px;
   margin: 10px;
   font-family: 'Times New Roman', Times, serif;
@@ -79,7 +79,23 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+
 .object_2 Button {
+
+  cursor: pointer;
+  width: 120px;
+  height: 60px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.object_2_1{
+  background-color: black;
   cursor: pointer;
   width: 120px;
   height: 60px;
@@ -299,13 +315,12 @@ body {
   transform: scale(1.05);
 }
 
-.object3_1 Button {
+.object3_1 td Button  {
   width: 120px;
   height: 40px;
   margin-top: 37px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
-
+background-color: black;
   color: antiquewhite;
   cursor: pointer;
   border: none;

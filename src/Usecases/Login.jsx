@@ -11,20 +11,14 @@ const Login = ({ loginsuccess, loginsuccess2 }) => {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const formSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Start loading
-
+    setLoading(true); 
     try {
       if (option === 'guest' || option === 'admin') {
-        // Dispatch login action for both guest and admin
         const action = loginuser({ username, password });
         await dispatch(action);
-
-        // Simulate some delay for demonstration purposes (remove in production)
         await new Promise(resolve => setTimeout(resolve, 1000));
-
         if (option === 'guest') {
           setMessage('You logged in as a Guest');
           loginsuccess();
@@ -41,14 +35,10 @@ const Login = ({ loginsuccess, loginsuccess2 }) => {
       setLoading(false); // Stop loading
     }
   };
-
   const handleRemember = () => {
-    // Logic for remembering password
     console.log('Remember Me clicked');
   };
-
   const handleForgetClick = () => {
-    // Logic for forgetting password
     console.log('Forget Your Password clicked');
   };
 
@@ -63,6 +53,7 @@ const Login = ({ loginsuccess, loginsuccess2 }) => {
               name="username"
               required
               value={username}
+              id='username'
               onChange={(e) => setUsername(e.target.value)}
             />
             <span></span>
@@ -75,6 +66,7 @@ const Login = ({ loginsuccess, loginsuccess2 }) => {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              id='password'
             />
             <span></span>
             <label>Password</label>

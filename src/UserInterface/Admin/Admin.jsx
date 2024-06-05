@@ -5,9 +5,8 @@ import Newpage from './ViewData/Newpage.jsx';
 import Edit from './EditData/Edit.jsx';
 import Detailpage from './Detailpage/Detailpage.jsx';
 import AdminAPI from '../../Usecases/Apidata/AdminAPI.jsx';
-import { Button, Flex } from 'antd';
+import { Button, Space, Select } from 'antd';
 import { PoweroffOutlined } from '@ant-design/icons';
-import { Select, Space } from 'antd';
 
 const Guestppage = ({ adminview, borrowdata, editdata }) => {
   const [option, setOption] = useState('');
@@ -61,23 +60,22 @@ const Guestppage = ({ adminview, borrowdata, editdata }) => {
           <h3>Select Category of Books</h3>
         </div>
         <div className="object4_2">
-        <Space wrap>
+          <Space wrap>
             <Select
               defaultValue=""
               style={{ width: 150 }}
               onChange={(value) => setOption(value)}
             >
-              <option value="">Select a category</option>
-              <option value="Dystopian">Dystopian</option>
-              <option value="Fantasy">Fantasy</option>
-              <option value="Romance">Romance</option>
-              <option value="Classic">Classic</option>
+              <Select.Option value="">Select a category</Select.Option>
+              <Select.Option value="Dystopian">Dystopian</Select.Option>
+              <Select.Option value="Fantasy">Fantasy</Select.Option>
+              <Select.Option value="Romance">Romance</Select.Option>
+              <Select.Option value="Classic">Classic</Select.Option>
             </Select>
           </Space>
-          </div>
+        </div>
         <div className="object4_3">
-        <Button
-          
+          <Button
             icon={<PoweroffOutlined />}
             loading={isLoading}
             onClick={handlefunction}
@@ -118,10 +116,10 @@ const Guestppage = ({ adminview, borrowdata, editdata }) => {
                 <td>${book.price}</td>
                 <td>{book.quantity}</td>
                 <td>
-                  <Button type='primary' style={{backgroundColor:"black"}} onClick={()=>adminview(book)} >View</Button>
-                  <Button type='primary'style={{backgroundColor:"black"}} onClick={() => borrowdata(book)}>Borrow</Button>
-                  <Button type='primary' style={{backgroundColor:"black"}} onClick={() => editdata(book)}>Edit</Button>
-                  <Button  type='primary'style={{backgroundColor:"black"}} onClick={() => handleSeeDetails(book)}>See Details</Button>
+                  <Button type='primary'  onClick={() => adminview(book)}>View</Button>
+                  <Button type='primary'  onClick={() => borrowdata(book)}>Borrow</Button>
+                  <Button type='primary'  onClick={() => editdata(book)}>Edit</Button>
+                  <Button type='primary' onClick={() => handleSeeDetails(book)}>See Details</Button>
                 </td>
               </tr>
             ))}

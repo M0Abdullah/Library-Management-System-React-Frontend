@@ -2,10 +2,8 @@ import React from 'react';
 import Main from './Main';
 import './App.css';
 import { useSelector } from 'react-redux';
-
 export default function App() {
   const user = useSelector((state) => state.user.userObj);
-
   React.useEffect(() => {
     console.log('Logged in user:', user);
   }, [user]);

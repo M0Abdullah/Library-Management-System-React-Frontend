@@ -8,11 +8,7 @@ import BorrowPage from '../UserInterface/Admin/BorrowData/Borrow.jsx';
 import EditPage from '../UserInterface/Admin/EditData/Edit.jsx';
 import Detailpage from '../UserInterface/Admin/Detailpage/Detailpage.jsx';
 import { DownloadOutlined } from '@ant-design/icons';
-import { Button, Divider, Flex, Radio } from 'antd';
-// import { Button, Flex } from 'antd';
-
-// import type { ConfigProviderProps } from 'antd';
-
+import { Button, Flex } from 'antd';
 const Main = () => {
     const [currentPage, setCurrentPage] = useState('');
     const [previousPage, setPreviousPage] = useState('');
@@ -25,15 +21,11 @@ const Main = () => {
         if (loggedInStatus === 'true') {
             setIsLoggedIn(true);
         }
-
         const handlePopState = () => {
-            const path = window.location.pathname.slice(1); // Remove leading '/'
+            const path = window.location.pathname.slice(1);
             setCurrentPage(path);
         };
-
         window.addEventListener('popstate', handlePopState);
-
-        // Initialize current page based on URL
         setCurrentPage(window.location.pathname.slice(1));
 
         return () => {
@@ -196,10 +188,10 @@ const Main = () => {
                                     <tr className='object3_1'>
                                         <td>
 
-                                            <Button style={{backgroundColor:"black"}} onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })} type="primary" icon={<DownloadOutlined />} >View</Button>
+                                            <Button onClick={() => handleView({ id: 1, name: 'The Great Gatsby', category: 'Classic', quantity: 50, price: 12.99 })} type="primary" icon={<DownloadOutlined />} >View</Button>
                                             <br />
 
-                                            <Button style={{backgroundColor:"black"}} onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })} type="primary" icon={<DownloadOutlined />}  >View</Button>
+                                            <Button onClick={() => handleView({ id: 2, name: 'To Kill a Mockingbird', category: 'Classic', quantity: 40, price: 10.99 })} type="primary" icon={<DownloadOutlined />}  >View</Button>
 
                                         </td>
                                     </tr>
@@ -222,18 +214,18 @@ const Main = () => {
                     <h1>Library Management System</h1>
                 </div>
                 <div className="object_2">
-                <Flex gap="small" wrap>
-                    {currentPage !== 'login' && <Button onClick={handleBack}>Back</Button>}
-                    {isLoggedIn ? (
-                        <Button type='primary' style={{backgroundColor:"black"}} onClick={handleLogout}>Log Out</Button>
-                    ) : (
-                        <Button type='primary' style={{backgroundColor:"black"}} onClick={handlePage}>Log In</Button>
-                    )}
-                      </Flex>
+                    <Flex gap="small" wrap>
+                        {currentPage !== 'login' && <Button onClick={handleBack}>Back</Button>}
+                        {isLoggedIn ? (
+                            <Button type='primary' onClick={handleLogout}>Log Out</Button>
+                        ) : (
+                            <Button type='primary' className ='.object_2_1' onClick={handlePage}>Log In</Button>
+                        )}
+                    </Flex>
 
                 </div>
             </div>
-            {errorMessage && <p id='abd'>{errorMessage}</p>}
+            {errorMessage && <p className='abd'>{errorMessage}</p>}
             {renderPage()}
         </div>
     );

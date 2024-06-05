@@ -16,7 +16,6 @@ export const loginuser = createAsyncThunk('user/loginUser', async (userCred) => 
     throw new Error('Authentication failed');
   }
 });
-
 const userslice = createSlice({
   name: 'user',
   initialState: {
@@ -41,5 +40,4 @@ const userslice = createSlice({
       });
   },
 });
-
 export const { reducer: userReducer } = userslice;

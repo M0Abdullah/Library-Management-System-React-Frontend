@@ -66,6 +66,8 @@ const Edit = ({ book, updateBook, closeEdit }) => {
             max={1000}
             onChange={(value) => handleNumberChange('id', value)}
             stringMode
+            id="Id"
+      
           />
           <div className="label1">
             <label>Name</label>
@@ -75,6 +77,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
             name="name"
             value={editedBook.name || ''}
             onChange={handleChange}
+            id="name"
           />
         </div>
         <div className="flex1">
@@ -86,6 +89,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
             name="category"
             value={editedBook.category || ''}
             onChange={handleChange}
+            id="category"
           />
           <div className="label2">
             <label>Price</label>
@@ -97,6 +101,7 @@ const Edit = ({ book, updateBook, closeEdit }) => {
             max={1000}
             onChange={(value) => handleNumberChange('price', value)}
             stringMode
+            id="price"
           />
         </div>
         <div className="flex3">
